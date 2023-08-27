@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>{{ item.meal }}</h1>
-    <p>{{ item.description }}</p>
-    <p>{{ item.price }}</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h1 class="list-group-item pt-0">{{ item.meal }}</h1>
+        <p class="pt-5">{{ item.description }}</p>
+        <p class="badge bg-primary rounded-pill">{{ item.price }}</p>
+    </div>
+{% endblock content %}
